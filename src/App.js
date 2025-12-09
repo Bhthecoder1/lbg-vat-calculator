@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="header field">
-      Ben's Calculator
+      Ben's Calc
       <div className="colour-border">
         <VatRateField
           customstyle="field"
