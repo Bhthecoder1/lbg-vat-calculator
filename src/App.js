@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="header field">
-      Blues App
+      Testing the App
       <div className="colour-border">
         <VatRateField
           customstyle="field"
