@@ -6,7 +6,7 @@ pipeline {
         registry = "${dockerCreds_USR}/vatcal"
         registryCredentials = "dockerhub_login"
         dockerImage = ""
-        TF_VAR_gcp_project = "<your project ID from qwiklabs>"
+        TF_VAR_gcp_project = "qwiklabs-gcp-03-143bfc378465"
         TF_VAR_docker_registry = "${registry}"
     }
     stages {
@@ -45,6 +45,7 @@ pipeline {
                         sh '''
                         export GOOGLE_APPLICATION_CREDENTIALS=$GCP_CREDENTIALS
                         terraform init
+                        terrascan -i terraform -t gcp
                         terraform apply -auto-approve
                         '''
                     }
