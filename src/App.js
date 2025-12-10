@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="header field">
-      Testing the App
+      VAT CALCULATOR
       <div className="colour-border">
         <VatRateField
           customstyle="field"
